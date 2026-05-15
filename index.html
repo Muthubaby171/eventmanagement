@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #eee3ec;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a0c3b;
+    padding: 15px 40px;
+    color: white;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo
+{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo span{
+    color:gold;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+nav ul li align-self:hover
+{
+    color:#ffb6ff;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.hero
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d66ac3;
+    color:white;
+    align-items: center;
+}
+.hero-text
+{
+    flex:1;
+    padding:50px;
+}
+.hero-text h1
+{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.hero-text p{
+    margin-bottom: 20px;
+}
+.hero-text button{
+    padding:12px 25px;
+    background-color: #5a2d5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero img{
+    width:400px;
+    max-width: 100%;
+}
+.services
+{
+    width:90%
+    margin:30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding: 40px;
+}
+.card
+{
+    background-color: #8fd3e8;
+    text-align: center;
+    padding:20px ;
+    border-radius: 10px;
+}
+.card h2{
+    margin:15px 0;
+}
+.card button{
+    padding:10px;
+    border:none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.why img{
+    width: 350px;
+    max-width: 100%;
+}
+.why-content
+{
+    flex:1;
+    padding: 30px;
+}
+.why-content h2{
+    margin-bottom: 20px;
+}
+.why-content ul{
+    line-height: 2;
+}
+.packages
+{
+    width:90%;
+    margin:50px auto;
+    padding:40px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr)) ;
+    gap: 20px;
+}
+.package
+{
+background-color: #8fd3e8;
+padding: 25px;
+border-radius: 10px;
+}
+.package h2{
+    margin-bottom: 15px;
+}
+.package p{
+    margin-bottom: 10px;
+}
+.package button{
+    padding: 10px 20px;
+    border:none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.popup
+{
+    position: fixed;
+    top:50%;
+    left:50;
+    transform:translate(-50%,-50%);
+    background-color:white ;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    display:none;
+    z-index: 1000;
+    text-align: center;
+}
+.popup button{
+    margin-top:15px;
+    padding:8px 20px;
+    border:none;
+    background-color: #5a2d57;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+footer{
+    background-color: #5a2d5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+@media(max-width:768x)
+{
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul
+    {
+        margin-top: 10px;
+    }
+
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <span>Beauty</span>Parlour
+            </div>
+            <div class="menu">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Quality Bridal Makeup & Hair styling services</h1>
+                    <p>Certified Professionals To Cater Your Bridal Makeup & Hairstyling Needs</p>
+                    <button onclick="showpopup()">Request Quote</button>
+            </div>
+            <img src="d:\mock interview program\images\face2-removebg-preview.png">
+        </section>
+                <section class="services">
+            <div class="service-box">
+                <h2>BRIDEL MAKEUP</h2>
+                <button onclick="bookNow('Bridal Makeup')">Book Now</button>
+                </div>
+                <img src="d:\mock interview program\images\bridel2.jpeg">
+            <div class="service-box">
+                <h2>PARTY MAKEUP</h2>
+                <button onclick="bookNow('Party Makeup')">Book Now</button>
+                </div>
+                <img src="d:\mock interview program\images\party w2.jpg">
+                <img src="d:\mock interview program\images\hairst.jpg">
+                <div class="service-box">
+                    <h2>HAIR STYLING</h2>
+                <button onclick="bookNow('Hair Styling')">Book Now</button>
+                </div>
+                <img src="d:\mock interview program\images\saree drap.jpg">
+                <div class="service-box">
+                    <h2>SAREE DRAPPING</h2>
+                <button onclick="bookNow('Saree Drapping')">Book Now</button>
+                </div>
+        </section>
+        <section class="why">
+            <img src="d:\mock interview program\images\makeover-removebg-preview.png">
+            <div>
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>Industry Standard Quality Products</li>
+                    <li>Bridal Makup And HairStyling Services
+                        Provided By Certified Professionals
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="package">
+            <img src="d:\mock interview program\images\bueaty_pr2-removebg-preview.png">
+            <div class="Package-container">
+                <div class="package-card">
+                    <h2>Bridal Makeup Luxury Package</h2>
+                    <p>8 Hr Package</p>
+                    <p><b>Rs 25000 Negotible</b></p>
+                    <button onclick="bookNow('Luxury Package')">Request To Book</button>
+                </div>
+            </div>
+            <img src="d:\mock interview program\images\bueaty_pr-removebg-preview.png">
+        </section>
+        <div class="popup" id="popup">
+            <h2 id="popupText">booking Successful</h2>
+            <button onclick="closepopup()">Close</button>
+        </div>
+        <script>
+function shoepopup()
+{
+    document.getElementById("popup").style.display="block";
+    document.getElementById("popupText").innerHTML="Thank you ! We will Contact you soon.";
+}
+fuction closePopup()
+{
+    document.getElementById("popup").style.display="none";
+
+}
+function bookNow(service)
+{
+    document.getElementById("popup").style.display="block";
+    document.getElementById("popupText").innerHTML=service+"Booked Successfully!";
+}
+</script>
+</body>
+</html>

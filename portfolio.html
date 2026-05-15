@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+                *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+            nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    flex-wrap: wrap;
+}
+
+.icon{
+    color:white;
+    font-size: 20px;
+}
+.gallery{
+    width:92%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+}
+.gallery-item{
+    overflow:hidden;
+    position:relative;
+
+}
+.gallery-item img{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gallery-item img:hover{
+    transform:scale(1.08)
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:50%;
+    height:100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup img{
+    width:50%;
+    max-width: 400px;
+    border-radius: 10px;
+
+}
+.close{
+    position: absolute;
+    top:20px;
+    right:40px;
+    font-size: 40px;
+    color:white;
+    cursor: pointer;
+
+}
+footer{
+            background-color: #5a2d55;
+            color: white;
+            padding:40px 10%;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            font-size:14px;
+        }
+                    @media(max-width:768px){
+        .navbar{
+            flex-direction: column;
+            gap:20px;
+        }
+        nav-lings{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        main-content{
+            flex-direction: column;
+        }
+    }
+</style>
+<nav>
+            <div class="logo">
+            <img src="d:\mock interview program\images\bueaty_lg2-removebg-preview.png">
+            </div>
+            <ul>
+        
+                   <li> <a href="#">Home</a></li>
+                   <li> <a href="#">Services</a></li>
+                   <li> <a href="#">Portfolio</a></li>
+                   <li> <a href="#">About Us</a></li>
+                   <li> <a href="#">Contact</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                    <span style="color:white;"></span>
+                </div>
+</nav>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\bridel face.jpeg"onclick="openpopup(this.src)">
+    </div>
+        <div class="gallery-item">
+        <img src="d:\mock interview program\images\bridel3.jpeg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\face1-removebg-preview.png"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\bridel5.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\bridel6.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\party w2.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\hairst2.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\hairst.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\hair brid.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\party w.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\party ma1.jpg"onclick="openpopup(this.src)">
+    </div>
+<div class="gallery-item">
+        <img src="d:\mock interview program\images\party saree.jpg"onclick="openpopup(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="d:\mock interview program\images\chudi.jpg"onclick="openpopup(this.src)">
+    </div>
+<div class="gallery-item">
+        <img src="d:\mock interview program\images\chudi2.jpg"onclick="openpopup(this.src)">
+    </div>
+<div class="gallery-item">
+        <img src="d:\mock interview program\images\bride new.jpg"onclick="openpopup(this.src)">
+    </div>
+</div>
+<div class="popup" id="popup">
+    <span class="close"  onclick="closepopup()">&times;</span>
+    <img id="popup-img">
+</div>
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+        <script>
+            function openpopup(imagesrc)
+            {
+                document.getElementById("popup").style.display="flex";
+                document.getElementById("popup-img").src=imagesrc;
+            }
+            function closePopup()
+            {
+            document.getElementById("popup").style.display="none";
+
+            }
+            </script>
+
+</body>
+</html>

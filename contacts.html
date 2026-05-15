@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+            nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    color:#f2d38a;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.user{
+    color:white;
+    font-size: 18px;
+}
+.contact-section{
+    padding:50px 8%;
+}
+.contact-title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.contact-box{
+    background-color: #e16bc8;
+    padding: 40px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.contact-card h2{
+    margin-bottom: 20px;
+}
+.contact-card p{
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+.contact-card i{
+    margin-right: 10px;
+}
+        .social-icons{
+            margin-top: 20px;
+        }
+        .social-icons i{
+            margin-right:15px;
+            font-size: 22px;
+            cursor: pointer;
+            transform: 0.3s;
+
+        }
+        .social-icons i:hover{
+            color:white;
+        }
+        .reach-us{
+            margin-top: 60px;
+        }
+        .reach-us h2{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .reach-container{
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .contact-form{
+            flex:1;
+            min-width: 300px;
+        }
+        .input-group input{
+            width:100%
+
+        }
+        .contact-form input,.contact-form textarea{
+            width:100%;
+            padding: 12px;
+            margin-bottom: 25px;
+            border: none;
+            border-bottom: 2px solid #555;
+            background: transparent;
+            outline: none;
+            font-size: 16px;
+        }
+        .contact-form textarea{
+            resize: none;
+            height:100px;
+        }
+        .contact-form button{
+            background-color: #7b7df5;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 5px;
+            cursor:pointer;
+            transition: 0.3s;
+            
+        }
+        .contact-form button:hover{
+            background: #5c5ef0;
+        }
+        .map{
+            flex:1;
+            min-width: 300px;
+        }
+        imap img{
+            width:100%;
+            border-radius: 10px;
+        }
+        footer{
+            background-color: #5b2d57;
+            color: white;
+            margin-top: 60px;
+            padding: 50px 8% 20px;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .footer-container a:hover{
+            color:#f3d38a
+        }
+        .footer-bottm{
+            border-top:1px solid #aaa;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .footer-social i{
+            margin:010px;
+            cursor: pointer;
+        }
+        .footer-social i:hover{
+            color:#F2D38A
+        }
+                .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            font-size:14px;
+        }
+                    @media(max-width:768px){
+        .navbar{
+            flex-direction: column;
+            gap:20px;
+        }
+        nav-lings{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        main-content{
+            flex-direction: column;
+        }
+    }
+        
+    </style>
+</head>
+<body>
+    <nav>
+            <div class="logo">
+                <img src="d:\mock interview program\images\bueaty_lg2-removebg-preview.png">
+            </div>
+            <ul>
+        
+                   <li> <a href="#">Home</a></li>
+                   <li> <a href="#">Services</a></li>
+                   <li> <a href="#">Portfolio</a></li>
+                   <li> <a href="#">About Us</a></li>
+                   <li> <a href="#">Contact</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                  <span style="color:white;"></span>
+                </div>
+                <div class="user-icon">
+                <i class="fa fa-user"></i>
+                </div>
+            </nav>
+            <section  class="contact-section">
+                <h1 class="contact-title">CONTACT</h1>
+                <div class="contact-box">
+                    <div class="contact-card">
+                        <h2>Address</h2>
+                        <p>
+                            <i  class="fa fa-location-dot"></i>
+                            8-2-686/DR/9,Banjara Hills,
+                            Hyderbad,telungana 500034
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <h2>Contact</h2>
+                        <p>
+                            <i class="fa fa-phone"></i>
+                            phone:076740 83778
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope"></i>
+                            Email:bookingmyna@gmail.com
+                        </p>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter-f"></i>
+                          <i class="fab fa-linkedIn-f"></i>
+                        <i class="fab fa-instagram-f"></i>
+                    </div>
+                    </div>
+                    <div class="contact-card">
+                        <h2>Bussiness Hours</h2>
+                        <p><i class="fa-regular fa-clock"></i>
+                        Mon-Fri:9.00 Am-5.00 Pm</p>
+                        <p><i class="fa-regular fa-clock"></i>
+                        Saturday:8.00 Am-4.00 Pm</p>
+                        <p><i class="fa-regular fa-clock"></i>
+                        Sunday:closed</p>
+                    </div>
+                </div>
+                <div class="reach-us">
+                    <h2>Reach Us</h2>
+                    <div class="reach-container">
+                        <form class="contact-form">
+                            <div class="input-group">
+                                <input type="text" placeholder="First Name">
+                                <input type="text" placeholder="Last Name">
+                                <input type="Email" placeholder="Email">
+                                <textarea placeholder="Message"></textarea>
+                                <button type="submit">Send</button>
+                        </form>
+                        <div class="map">
+                            <img src="d:\mock interview program\images\map1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+        <script>
+            const form=document.querySelector(".contact-form");
+            form.addEventListener("submit",function(e)
+        {
+            e.preventDefault();
+            alert("Message send Successfully");
+            form.reset();
+        })
+        </script>
+
+    
+</body>
+</html>

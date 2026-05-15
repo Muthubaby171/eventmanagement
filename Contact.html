@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+            nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.hero
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d66ac3;
+    color:white;
+    align-items: center;
+}
+.hero-text
+{
+    flex:1;
+    padding:50px;
+}
+.hero-text h1
+{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.hero-text p{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.hero-text button{
+    padding:12px 25px;
+    background-color: #5a2d5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.hero img{
+    width:400px;
+    height: 100%;
+    object-fit: cover;
+}
+
+        .services{
+            width:90%;
+            margin:30px auto;
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+        .service-box{
+            background-color: #87d7eb;
+            text-align: center;
+            overflow: hidden;
+        }
+        .service-box img{
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            margin-bottom: 15px;
+        }
+        .service-content
+        {
+        padding:20px;
+        }
+        .service-content h2{
+            margin:15px 0;
+            font-size: 28px;
+        }
+        .service-content button
+        {
+        padding:10px 20px;
+        border:none;
+        background:white;
+        cursor:pointer;
+        font-weight: bold;
+        }
+       .choose{
+        width:90%;
+        margin:40px auto;
+        background:#d86fC0;
+        border-radius :10px;
+        display:flex;
+        align-items:center;
+        gap:30px;
+        padding:20px;
+        color:black;
+       }
+        .choose img{
+        width:280px;
+        border-radius:10px;
+        }
+
+       .choose-content h2{
+        height: 2px;
+        margin: bottom 20px;
+        }
+        .choose-content ul li
+        {
+        margin: bottom 12px;
+        line-height:1.5;
+        }
+        .package-section
+        {
+        width:90%;
+        margin:50px auto;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        gap:20px;
+        }
+        .side img{
+             width: 180px;
+        }
+        .packages{
+            width:500px;
+        }
+        .package-card
+        {
+            background-color: #8dd6e7;
+            padding: 30px;
+            margin-bottom: 20px;
+            border:8px solid white;
+        }
+        .package-card h2
+        {
+         font-size: 35px;
+         margin-bottom: 15px;
+
+        }
+        .package-card p{
+            margin-bottom: 15px;
+        }
+        .package-card hr{
+            margin:15px 0;
+        }
+        .package-card h3{
+            margin: 10px 0;
+        }
+        .package-card button{
+            padding:12px 20px;
+            border:none;
+            background-color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .reviews
+        {
+            width:90%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px1fr));
+            gap:20px;
+        }
+        .review-box
+        {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .review-box h2{
+            margin-bottom: 10px;
+        }
+        .stars{
+            color: orange;
+            font-size: 22px;
+            margin: 10px;
+        }
+        footer{
+            background-color: #5a2d55;
+            color: white;
+            padding:40px 10%;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+        }
+        @media(max-width:768px){
+            .choose{
+                flex-direction: column;
+                text-align: center;
+            }
+            .package-section{
+                flex-direction: column;
+            }
+            .packages{
+                width:100%;
+            }
+            .side-img{
+                width:120px;
+            }
+            .package-card h2{
+                font-size: 28px;
+            }
+        }
+</style>
+<body>
+<nav>
+            <div class="logo">
+                <img src="d:\mock interview program\images\bueaty_lg2-removebg-preview.png">
+            </div>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li class="dropdown"></li>
+               <li> <a href="Service.html">Services</a>
+                <li><a href="portfolio.html">Portfolio</a></li
+                
+                <li><a href="contacts.html">Contact</a>
+                <li><a href="AboutUs.html">AboutUs</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                </div>
+</nav>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Quality Bridal Makeup & Hair styling services</h1>
+                    <p>Certified Professionals To Cater Your Bridal Makeup & Hairstyling Needs</p>
+                    <button onclick="showmessage()">Request Quote</button>
+                    <a href=""
+            </div>
+            <img src="d:\mock interview program\images\face2-removebg-preview.png">
+        </section>
+                <section class="services">
+            <div class="service-box">
+                <img src="d:\mock interview program\images\bridel2.jpeg">
+                <div class="service-content">
+                <h2>BRIDEL MAKEUP</h2>
+                <button onclick="bookNow()">BOOK NOW</button>
+                </div>
+                </div>
+                
+            <div class="service-box">
+         <img src="d:\mock interview program\images\party w2.jpg">
+         <div class="service-content">
+          <h2>PARTY MAKEUP</h2>
+                <button onclick="bookNow()">BOOK NOW</button>
+                </div>
+                </div>
+                <div class="service-box">
+                    <img src="d:\mock interview program\images\hairst.jpg">
+            <div class="service-content">
+                <h2>Hair Styling</h2>
+                <button onclick="bookNow()">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="d:\mock interview program\images\saree drap.jpg">
+            <div class="service-content">
+                <h2>Saree Drapping</h2>
+                <button onclick="bookNow()">BOOK NOW</button>
+
+            </div>
+        </div>
+    </section>
+    <section class="choose">
+        <img src="d:\mock interview program\images\makeover-removebg-preview.png">
+        <div class="choose-content">
+            <h2>Why choose Us?</h2>
+            <ul>
+                <li>Industry Standard Quality Products</li>
+                <li>Bridal Mackup And Hairstyling Services Provided By Friendly Cerdified Professionals At Affordable Budgets</li>
+            </ul>
+         </div>
+    </section>
+    <section class="package-section">
+        <img class="side-img" src="d:\mock interview program\images\bueaty_pr2-removebg-preview.png">
+        <div class="packages">
+            <div class="package-card">
+                <h2>Bridel Mackup Lucury Package</h2>
+                <p>Indulge In Bridal Elegance:Experience OurLuxury Makeup Package!</p>
+                <hr>
+                <h3>8 Hr</h3>
+                <h3>Rs 25000 Negotiable</h3>
+                <button onclick="showpackage('Luxury Package')">Request To  Book</button>
+            </div>
+                        <div class="package-card">
+                <h2>Bridel Mackup Premium Package</h2>
+                <p>Indulge In Bridal Elegance:Experience OurLuxury Makeup Package!</p>
+                <hr>
+                <h3>6 Hr</h3>
+                <h3>Rs 20000 Negotiable</h3>
+                <button onclick="showpackage('Premium Package')">Request To  Book</button>
+            </div>
+        </div>
+        <img class="side-img" src="d:\mock interview program\images\bueaty_pr-removebg-preview.png">
+    </section>
+    <section class="reviews">
+        <div class="review-box">
+            <h2>4.7</h2>
+            <div class="stars"></div>
+            <h3>Google Overall Rating</h3>
+            <h3>Booking Myna</h3>
+        </div>
+                <div class="review-box">
+            <h2>Manoj Ponda</h2>
+            <div class="stars"></div>
+        <p>Very Quick Response with Good Artist</p>
+            </div>
+                <div class="review-box">
+            <h2>Shanvi Sharav</h2>
+            <div class="stars"></div>
+         <p>Very Quick Response with Good Artist</p>
+        </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+        <script>
+            function bookNow()
+            {
+                alert("Booking Successful");
+            }
+            function showpackage(packageName)
+            {
+                alert("You Selected"+ packageName);
+            }
+        </script>
+    
+</body>
+</html>

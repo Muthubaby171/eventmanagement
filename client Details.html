@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+                *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+            nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.container{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    min-height:500px;
+}
+.back{
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #444;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    flex-wrap: wrap;
+}
+.form-section{
+    flex: 2;
+}
+.form-section h2{
+    margin-top: 15px;
+}
+
+.line{
+    border-bottom: 1px solid #999;
+    margin-bottom: 25px;
+}
+.login-box{
+    background-color: #dcdcdc;
+    padding: 15px;
+    margin:20px 0;
+    font-weight: bold;
+
+}
+.login-box span{
+    color: blue;
+    cursor: pointer;
+}
+.form-group label{
+    display:block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form-group input,.form-group textarea,.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #999;
+    outline: none;
+}
+.phone-box{
+    display:flex;
+    gap:10px;
+}
+.phone-box select{
+    width:80px;
+}
+.phone-box input{
+    flex:1;
+}
+textarea{
+    resize: none;
+    height: 90px;
+}
+.booking-details{
+    flex:1;
+}
+.booking-details h3{
+    margin-bottom: 15px;
+}
+.booking-card{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding:20px 0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.book-btn{
+    width:100%;
+    padding:14px;
+    background: #7373ff;
+    border: none;
+    color:white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+.book-btn:hover{
+    background: #4c4cff;
+}
+footer{
+            background-color: #5a2d55;
+            color: white;
+            padding:40px 10%;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            font-size:14px;
+        }
+        @media(max-width:768px){
+        .navbar{
+            flex-direction: column;
+            gap:20px;
+        }
+        nav-lings{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        main-content{
+            flex-direction: column;
+        }
+    }
+</style>
+      <nav>
+            <div class="logo">
+                <img src="d:\mock interview program\images\bueaty_lg2-removebg-preview.png">
+            </div>
+            <ul>
+        
+                   <li> <a href="#">Home</a></li>
+                   <li> <a href="#">Services</a></li>
+                   <li> <a href="#">Portfolio</a></li>
+                   <li> <a href="#">About Us</a></li>
+                   <li> <a href="#">Contact</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                    <span style="color:white;"></span>
+                </div>
+</nav>
+<div class="container">
+    <div class="back" onclick="goback()"><- Back</div>
+   <div class="main-content">
+    <div class="form-section">
+        <h2>Client Details</h2>
+        <div class="line"></div>
+        <p>Tell us A Bit About Yourself</p>
+        <div class="login-box">
+            Already Have An Account?
+            <span>Log In</span>
+            For Faster Booking.
+        </div>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label>Name*</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Email*</label>
+                <input type="Email" required>
+            </div>
+            <div class="form-group">
+                <label>phone Number</label>
+                <div class="phone-box">
+                    <select>
+                        <option>+91</option>
+                        <option>+1</option>
+                        <option>+44</option>
+
+                    </select>
+                    <input type="tel">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>street *</label>
+                <input type="text" required>           
+            </div>
+            <div class="form-group">
+                <label>Apt./Floor No</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>City *</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>State</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Add Your Message</label>
+                <textarea></textarea>
+                </div>
+         </form>
+    </div>
+    <div class="booking-details">
+        <h3>Booking Details</h3>
+        <div class="booking-card">
+            <p>Bridal Makeup Luxury Package <br> Rs 25000 Negotiable</p>
+            <p><b>12 May 2025</b></p> At 2.30Am</b></p>
+            <p>Clients Place<br>Admin<br>8 Hr</p>
+        </div>
+        <h3>Payment Details</h3>
+        <div class="booking-card">
+            <p>Rs  25000 Negotiable</p>
+        </div>
+        <p style="margin-bottom: 20px; line-height: 1.6;">
+            By Completing Your Booking, You Agree To Receive Related
+            SMS Notifications.
+        </p>
+        <button class="book-btn" onclick="bookNow()">BOOK Now</button>
+    </div>
+    </div>
+    </div>
+    <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+        <script>
+            function bookNow()
+            {
+                alert("Booking Successful");
+            }
+        </script>
+
+
+
+</body>
+</html>

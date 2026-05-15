@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+                *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+            nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.container{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    min-height:500px;
+}
+.back{
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #444;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title h1{
+    font-size: 35px;
+    margin-bottom: 15px;
+
+}
+.title p{
+    color:#555;
+}
+.booking-section
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.column{
+    flex:1;
+   min-width:250px;
+}
+.column h3{
+    border-bottom: 2px solid #999;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.date-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.calendar{
+    background-color: #f2eaf2;
+    padding: 20px;
+    border-radius: 10px;
+}
+.calendr-header{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.days,.dates{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    gap:10px;
+    text-align: center;
+}
+.days div{
+    font-weight: bold;
+}
+.dates div{
+    padding:8px;
+    border-radius: 50%;
+}
+.active{
+    background-color: #6d4cc2;
+    color:white;
+}
+.time-slots{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:15px;
+}
+.time-slots button{
+    padding:10px;
+    border:1px solid #888;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.time-slots button:hover{
+    background-color: #5b2c53;
+    color:white ;
+}
+.details p{
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.book-btn{
+    background-color: #6d6df5;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+        footer{
+            background-color: #5a2d55;
+            color: white;
+            padding:40px 10%;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            font-size:14px;
+        }
+        @media(max-width:768px){
+        .navbar{
+            flex-direction: column;
+            gap:20px;
+        }
+        nav-lings{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        main-content{
+            flex-direction: column;
+        }
+    }
+           
+            </style>
+
+</head>
+<body>
+      <nav>
+            <div class="logo">
+                <img src="d:\mock interview program\images\bueaty_lg2-removebg-preview.png">
+            </div>
+            <ul>
+        
+                   <li> <a href="#">Home</a></li>
+                   <li> <a href="#">Services</a></li>
+                   <li> <a href="#">Portfolio</a></li>
+                   <li> <a href="#">About Us</a></li>
+                   <li> <a href="#">Contact</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                    <span style="color:white;"></span>
+                </div>
+</nav>
+<div class="container">
+    <div class="back" onclick="goback()"><- Back</div>
+    <div class="title">
+        <h1>Schedule your Service</h1>
+        <p>Check Out our Availability And Book The Date
+            And Time That Works For You
+        </p>
+    </div>
+    <div class="booking-section">
+        <div class="column">
+            <h3>Select A Date And Time</h3>
+            <input type="date" class="date-input">
+            <div class="calender">
+                <div class="calendr-header">
+                    <span>_<span>
+                </div>
+                <div class="days">
+                        <div>S</div>
+                        <div>M</div>
+                        <div>T</div>
+                        <div>W</div>
+                        <div>T</div>
+                        <div>F</div>
+                        <div>S</div>
+                </div>
+                <br>
+                    <div class="dates">
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div class="active">17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                </div>
+            </div>
+            </div>
+        </div  class="column">
+        <h3>India Standard Time(IST)</h3>
+            <p><b>Availability For Monday 12 May</b></p>
+            <div class="time-slots">
+                <button onclick="selectTime(this)">2.30 am</button>
+                <button onclick="selectTime(this)">2.00 am</button>
+                <button onclick="selectTime(this)">3.30 am</button>
+                <button onclick="selectTime(this)">3.00 am</button>
+                <button onclick="selectTime(this)">4.30 am</button>
+                <button onclick="selectTime(this)">4.00 am</button>
+                <button onclick="selectTime(this)">5.30 am</button>
+                <button onclick="selectTime(this)">5.00 am</button>
+                <button onclick="selectTime(this)">6.30 am</button>
+                <button onclick="selectTime(this)">6.00 am</button>
+            </div>
+        </div>
+        <div class="column details">
+            <h3>Service Details</h3>
+            <p>Bridal Makeup Lucury Package</p>
+            <p>Rs 25000Negotiable</p>
+            <p><b>12 May 2025 At 2.30Am</b></p>
+            <p>client's Place</p>
+            <p>Admin</p>
+            <p> 8 Hr</p>
+            <button class="book-btn" onclick="bookNow()">Request To Book</button>
+        </div>
+        </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+        <script>
+            function bookNow()
+            {
+                alert("Booking Request Sent Successfully!");
+            }
+            function goBack()
+            {
+                window.history.back();
+            }
+            function bookNow()
+            {
+                alert("Your Booking Request Submitted Successfully!");
+
+            }
+            {
+        
+            }
+        </script>
+
+</body>
+</html>

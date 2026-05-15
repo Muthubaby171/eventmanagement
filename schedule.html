@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+            nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.container{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    min-height:500px;
+}
+.back{
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #444;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title h1{
+    font-size: 35px;
+    margin-bottom: 15px;
+
+}
+.title p{
+    color:#555;
+}
+.schedule-box
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.box{
+    width:300px;
+}
+.box  h3{
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.box p{
+    margin 15px 0;
+    color:#444;
+}
+.btn{
+    background-color: #8d84ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+        footer{
+            background-color: #5a2d55;
+            color: white;
+            padding:40px 10%;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+        }
+        @media(max-width:768px){
+            .choose{
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+           
+            </style>
+</head>
+<body>
+  <nav>
+            <div class="logo">
+                <span>Beauty</span>Parlour
+            </div>
+            <ul>
+                <a href="booking.html"></a>
+        
+                   <li> <a href="#">Home</a></li>
+                   <li> <a href="#">Services</a></li>
+                   <li> <a href="#">Portfolio</a></li>
+                   <li> <a href="#">About Us</a></li>
+                   <li> <a href="#">Contact</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                    <span style="color:white;"></span>
+                </div>
+</nav>
+<div class="container">
+    <div class="back" onclick="goback()"><- Back</div>
+    <div class="title">
+        <h1>Schedule your Service</h1>
+        <p>Check Out our Availability And Book The Date
+            And Time That Works For You
+        </p>
+    </div>
+    <div class="schedule-box">
+        <div class="box">
+            <h3>Select A Date And Time</h3>
+            <p><b>India Standard time(IST)</b></p>
+            <p>Availability For Sunday 11 May<br> No Availability</p>
+            <button class="btn" onclick="checkAvailability()">Check Next Availability</button>
+        </div>
+        <div class="box">
+            <h3>Service Details</h3>
+            <p>Bridal Makeup Luxury Package<br>
+            Rs 25000 Negotiable</p>
+            <button class="btn" onclick="bookNow()">Request To Book</button>
+        </div>
+    </div>
+</div>
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+       <script>
+        function checkAvailability()
+        {
+            alert("Next Available date:Monday 12 MAY");
+        }
+        function bookNow()
+        {
+            alert("Your Booking Request Sent Successfully!");
+
+        }
+        function goBack()
+        {
+            window.history.back();
+        }
+    </script>
+  
+</body>
+</html>

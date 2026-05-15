@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #eee3ec;
+            }
+     nav{
+     background-color: #5b224f;
+     display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo
+{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo img{
+    width:80px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.search-box
+{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.search-box input
+{
+padding: 8px;
+border:none;
+border-radius: 5px;
+}
+.search-box button
+{
+padding:8px 10px;
+border:none;
+background-color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.heading{
+    text-align: center;
+    margin:30px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+.package-container
+{
+    width:90%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.tabs button{
+    background: none;
+    border:none;
+    font-size: 14px;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+.tabs button.active{
+    border-bottom: 3px solid purple;
+    color: purple;
+    font-weight: bold;
+}
+.package-card{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+.package-left{
+    display:flex;
+    gap:20px;
+    align-items: center;
+}
+.package-left img{
+    width:100px;
+    height: 100px;
+    object-fit: cover;
+}
+.package-details h3{
+    margin-bottom: 10px;
+}
+.package-details p{
+    color:#555;
+    font-size: 14px;
+}
+.package-time{
+    font-size: 15px;
+    line-height: 30px;
+}
+.book-btn
+{
+    background-color: #8a1876;
+    color: white;
+    border: none;
+    padding:12px 25px;
+    border-radius: 5px;
+    cursor:pointer;
+    font-weight: bold;
+}
+        footer{
+            background-color: #5a2d55;
+            color: white;
+            padding:40px 10%;
+        }
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:30px;
+        }
+        .footer-container h3{
+            margin-bottom: 15px;
+        }
+        .footer-container p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .copyright{
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+        }
+        @media(max-width:768px){
+            .choose{
+                flex-direction: column;
+                text-align: center;
+            }
+            .package-section{
+                flex-direction: column;
+            }
+            .packages{
+                width:100%;
+            }
+            .side-img{
+                width:120px;
+            }
+            .package-card h2{
+                font-size: 28px;
+            }
+        }
+        </style>
+        </head>
+        <body>
+<nav>
+            <div class="logo">
+                <img src="d:\mock interview program\images\bueaty_lg2-removebg-preview.png">
+            </div>
+            <ul>
+        
+                   <li> <a href="#">Home</a></li>
+                   <li> <a href="#">Services</a></li>
+                   <li> <a href="#">Portfolio</a></li>
+                   <li> <a href="#">About Us</a></li>
+                   <li> <a href="#">Contact</a></li>
+            </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                </div>
+ 
+ 
+            </nav>
+                <h1 class="heading">BRIDAL PACKAGES</h1>
+                <div class="package-container">
+                    <div class="tabs">
+                        <button>ALL SERVICES</button>
+                        <button class="active">BRIDAL PACKAGES</button>
+                        <button>PARTY MAKEUP PACKAGES</button>
+                        <button>SAREE DRAPPING</button>
+                        <button>HAIRSTYLING</button>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-left">
+                            <img src="d:\mock interview program\images\face1-removebg-preview.png">
+                            <div class="package-details">
+                                <h3>Bridal Makeup Lucury</h3>
+                                <p>Indulge In Bridal Elegance::Experience Our Lucury Makeup Package!</p>
+
+                            </div>
+                        </div>
+                        <div class="package-time">
+                            <p>8 Hr</p>
+                            <p>Rs 25000 Negotiable</p>
+                        </div>
+                        <button class="book-btn" onclick="bookNow()">BOOK NOW</button>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-left">
+                            <img src="d:\mock interview program\images\face2-removebg-preview.png">
+                            <div class="package-details">
+                                <h3>Bridal Makeup Premium Package</h3>
+                                <p>Unleash Your bridal Beauty:Experience The Premium Makeup Package!</p>
+
+                            </div>
+                        </div>
+                     
+                        <div class="package-time">
+                            <p>6 Hr</p>
+                            <p>Rs 18000 Negotiable</p>
+                        </div>
+                        <button class="book-btn" onclick="bookNow()">BOOK NOW</button>
+                    </div>
+                    <div class="package-card">
+                    <div class="package-left">
+                            <img src="d:\mock interview program\images\bridel6.jpg">
+                            <div class="package-details">
+                                <h3> Basic Bridal Makeup  Package</h3>
+                                <p>Simply Beautiful:Discover Our Basic Bridal Makeup Package!</p>
+
+                            </div>
+                        </div>
+                        <div class="package-time">
+                            <p>2 Hr</p>
+                            <p>Rs 12000 Negotiable</p>
+                        </div>
+                        <button class="book-btn" onclick="bookNow()">BOOK NOW</button>
+                    </div>
+                            <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Quick Lines</h3>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Portfolio</p>
+                    <p>Contact</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <p>Mission</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Industries</p>
+                </div>
+                <div>
+                    <h3>Other Lines</h3>
+                    <p>Blog</p>
+                    <p>Testimonials</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+                <div>
+                    <h3>Contact Info</h3>
+                    <p>Hytrabad, Telangana</p>
+                    <p>+91869-011-0011</p>
+                    <p>bookingmyna@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            @ 2025 Makeover Booking Service. All Rights Reserved
+            </div>
+        </footer>
+        <script>
+            function bookNow()
+            {
+                alert("Booking Successful");
+            }
+            function showpackage(packageName)
+            {
+                alert("You Selected"+ packageName);
+            }
+        </script>
+    
+</body>
+</html>
+
